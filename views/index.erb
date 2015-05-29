@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>News Aggregator</title>
+  </head>
+
+  <body>
+    <h1>Interesting Articles</h1>
+      <ul>
+      <% news.each do |article| %>
+        <h2><%= article["title"] %></h2>
+        <li><a href="<%= article["url"] %>" target="_blank"><%= article["url"] %></a></li>
+        <li><%= article["description"] %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
